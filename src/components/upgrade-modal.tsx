@@ -1,17 +1,6 @@
 'use client'
 
-/**
- * SOURCE OF TRUTH KEYWORDS: UpgradeModal, UpgradeModalProps
- *
- * WHAT:  Branded "you hit a limit, upgrade?" dialog with a link to the billing
- *        route for the given organization.
- * WHY:   Copy flows through BRANDING. The billing destination is read from
- *        RESOURCES.billing.nav.href — that's the registry-level source of
- *        truth for the billing page location, so this modal cannot drift
- *        away from the sidebar/nav.
- * WHERE: Rendered by FeatureGate when atLimit fires; reads BRANDING from
- *        src/lib/config and resource metadata from src/lib/resources.
- */
+
 
 import * as React from 'react'
 import Link from 'next/link'
