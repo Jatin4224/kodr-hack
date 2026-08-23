@@ -1,15 +1,4 @@
-/**
- * SOURCE OF TRUTH KEYWORDS: BaseLayout, emailStyles, EmailButton
- *
- * WHAT:  Shared chrome for every transactional email — Html/Head/Body/Container
- *        wrapper, brand header, footer, the `emailStyles` token object, and a
- *        small <EmailButton> CTA.
- * WHY:   One visual source so a rebrand (logo, colors, footer) happens here and
- *        flows to every template; tokens keep inline styles consistent across
- *        the verification, reset, and invitation emails.
- * WHERE: Imported by every template under src/lib/email-templates/transactional/*;
- *        templates are rendered to HTML in src/services/email.service.ts.
- */
+
 
 import * as React from 'react'
 import {

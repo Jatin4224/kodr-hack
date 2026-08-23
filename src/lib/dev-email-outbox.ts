@@ -1,20 +1,6 @@
 import 'server-only'
 
-/**
- * SOURCE OF TRUTH KEYWORDS: recordDevEmail, takePendingDevEmail, DevEmailEntry
- *
- * WHAT:  A tiny in-memory outbox of "emails" that COULD NOT be sent because
- *        RESEND_API_KEY isn't configured. Stores the action link (verification /
- *        reset / invitation) so the dev UI can surface it in a toast instead of
- *        the link being lost.
- * WHY:   In local dev without an email provider, verification/reset links would
- *        otherwise only hit the server console. Recording them here lets a
- *        dev-only tRPC query hand the link back to the client. In-memory + best
- *        effort by design — this is a local-dev convenience, never a delivery
- *        mechanism (the endpoint that reads it is gated to development).
- * WHERE: Written by src/services/email.service.ts when a send is skipped; read
- *        (and cleared) by src/trpc/routers/dev.ts (getPendingEmail).
- */
+
 
 export interface DevEmailEntry {
   to: string
