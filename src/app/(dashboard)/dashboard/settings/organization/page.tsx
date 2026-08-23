@@ -1,0 +1,23 @@
+/**
+ * SOURCE OF TRUTH KEYWORDS: OrganizationSettingsPage
+ *
+ * WHAT:  /dashboard/settings/organization — rename + logo.
+ * WHERE: RESOURCES.organizationSettings.nav.href.
+ */
+
+import type { Metadata } from 'next'
+
+import { ContentLayout } from '@/components/global/page-header'
+import { OrganizationTab } from './_components/organization-tab'
+
+export const metadata: Metadata = {
+  title: 'Organization',
+}
+
+export default function OrganizationSettingsPage() {
+  return (
+    <ContentLayout title="Organization">
+      <OrganizationTab />
+    </ContentLayout>
+  )
+}
